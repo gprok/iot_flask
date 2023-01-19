@@ -22,7 +22,7 @@ class HumiditySensor:
             "type": self.type,  
             "lon": self.lon,  
             "lat": self.lat,
-            "data": {"humidity": r}
+            "value": r
         }
         print("sending data ...", Server.url)
         response = requests.post(Server.url, json=data)
